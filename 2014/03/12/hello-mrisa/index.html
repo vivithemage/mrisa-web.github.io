@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+
+  <title>
+    MRISA &middot; 
+    Meta Reverse Image Search API
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,400,600,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <h1>MRISA</h1>
+        <p class="lead">Meta Reverse Image Search API</p>
+
+        <div class="colophon">
+          <ul class="colophon-links">
+            <li>
+              <a href="https://github.com/vivithemage/mrisa/archive/master.zip">Download</a>
+            </li>
+            <li>
+              <a href="https://github.com/vivithemage/mrisa">GitHub project</a>
+            </li>
+            <li>Currently v0.1</li>
+          </ul>
+          <p>&copy; 2014. Reza Snowdon All rights reserved.</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="content container">
+      <div class="post">
+  <h1>MRISA</h1>
+  <span class="post-date">12 Mar 2014</span>
+  <p>MRISA (Meta Reverse Image Search Api) is a RESTful api which takes an image url, does a reverse image search and returns a json array with standard search information such as title, description, destination url and the total number of search results. MRISA currently uses the <a href="http://www.google.com/insidesearch/features/images/searchbyimage.html">google reverse image search</a>.</p>
+
+<h3>Getting Stated</h3>
+
+<p>Install the neccessary dependancies using pip</p>
+
+<pre><code>pip install flask pycurl beautifulsoup4
+</code></pre>
+
+<p>Running the server</p>
+
+<pre><code>python mrisa/mrisa_server.py
+</code></pre>
+
+<p>Using cURL to make a call to the API</p>
+
+<pre><code>curl -X POST -H "Content-Type: application/json" -d '{"image_url":"http://upload.wikimedia.org/wikipedia/commons/2/29/Voyager_spacecraft.jpg"}' http://localhost:5000/search
+</code></pre>
+
+<p>There is a client implentation in python in the repository but it should be nice and easy to create one in most languages.</p>
+
+<h3>Download</h3>
+
+<p>Find out more and <a href="https://github.com/vivithemage/mrisa">download a copy</a> from GitHub.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+    </div>
+
+  </body>
+</html>

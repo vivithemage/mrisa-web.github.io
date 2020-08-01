@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>MRISA</title>
+ <link href="http://mrisa.mage.me.uk/atom.xml" rel="self"/>
+ <link href="http://mrisa.mage.me.uk/"/>
+ <updated>2014-03-12T14:03:10-04:00</updated>
+ <id>http://mrisa.mage.me.uk</id>
+ <author>
+   <name>Reza Snowdon</name>
+   <email>rs@mage.me.uk</email>
+ </author>
+
+ 
+ <entry>
+   <title>MRISA</title>
+   <link href="http://mrisa.mage.me.uk/2014/03/12/hello-mrisa/"/>
+   <updated>2014-03-12T00:00:00-04:00</updated>
+   <id>http://mrisa.mage.me.uk/2014/03/12/hello-mrisa</id>
+   <content type="html">&lt;p&gt;MRISA (Meta Reverse Image Search Api) is a RESTful api which takes an image url, does a reverse image search and returns a json array with standard search information such as title, description, destination url and the total number of search results. MRISA currently uses the &lt;a href=&quot;http://www.google.com/insidesearch/features/images/searchbyimage.html&quot;&gt;google reverse image search&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Getting Stated&lt;/h3&gt;
+
+&lt;p&gt;Install the neccessary dependancies using pip&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pip install flask pycurl beautifulsoup4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Running the server&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;python mrisa/mrisa_server.py
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using cURL to make a call to the API&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl -X POST -H &quot;Content-Type: application/json&quot; -d '{&quot;image_url&quot;:&quot;http://upload.wikimedia.org/wikipedia/commons/2/29/Voyager_spacecraft.jpg&quot;}' http://localhost:5000/search
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;There is a client implentation in python in the repository but it should be nice and easy to create one in most languages.&lt;/p&gt;
+
+&lt;h3&gt;Download&lt;/h3&gt;
+
+&lt;p&gt;Find out more and &lt;a href=&quot;https://github.com/vivithemage/mrisa&quot;&gt;download a copy&lt;/a&gt; from GitHub.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
